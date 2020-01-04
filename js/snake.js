@@ -63,6 +63,7 @@ function loop() {
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
       score++;
+
       apple.x = getRandomInt(0, 25) * grid;
       apple.y = getRandomInt(0, 25) * grid;
     }
@@ -81,11 +82,12 @@ function loop() {
       }
     }
   });
-  functiondrawScore(){
+  function drawScore(){
     context.font="20px Arial";
     context.fillStyle="White";
-    context.fillText("score:"+score,5,20);
+    context.fillText("Score: "+score,5,20);
   }
+
   drawScore();
 }
 
